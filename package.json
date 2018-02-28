@@ -1,0 +1,62 @@
+{
+  "name": "street-suffix",
+  "version": "1.0.0",
+  "description": "Expands and Abbreviates USPS Street Suffixes",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "npm run lint && nyc mocha test.js"
+  },
+  "keywords": [
+    "street",
+    "streets",
+    "type",
+    "types",
+    "abbreviations",
+    "abbreviator",
+    "expand",
+    "expander",
+    "expansions",
+    "expansion",
+    "suffix",
+    "suffixes",
+    "usps",
+    "address"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StarryInternet/street-suffix"
+  },
+  "bugs": {
+    "type": "git",
+    "url": "https://github.com/StarryInternet/street-suffix/issues"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "author": "Alfred Ababio <aababio75@gmail.com> (https://www.twitter.com/alfredabab_io)",
+  "license": "MIT",
+  "dependencies": {
+    "street-types": "1.0.1"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "eslint": "4.15.0",
+    "eslint-config-starry": "7.0.0",
+    "eslint-plugin-starry": "5.0.0",
+    "mocha": "3.4.2",
+    "nyc": "11.4.1",
+    "rewire": "2.5.2"
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "check-coverage": true,
+    "lines": 100,
+    "branches": 100,
+    "statements": 100,
+    "functions": 100
+  }
+}
