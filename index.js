@@ -17,7 +17,15 @@ const street_types = require('street-types');
  * @return Object              - map of abbreviations to suffixes
  */
 function flatten( types, key ) {
-  return types.reduce( ( prev, type ) => {
+  return types
+  .map( type => {
+    const abbrs = new Set( type.abbrs )
+    .add( type.suffix )
+    .add( type.standardAbbr );
+
+    return Object.assign( {}, type, { abbrs: [ ...abbrs ] } );
+  })
+  .reduce( ( prev, type ) => {
     return type.abbrs.reduce( ( flat, abbr ) => {
       return Object.assign( flat, { [ abbr.trim() ]: type[ key ] } );
     }, prev );

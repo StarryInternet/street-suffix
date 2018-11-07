@@ -12,19 +12,24 @@ describe( 'index', () => {
       const flatten = module.__get__('flatten');
       const given = [
         {
-          "suffix": "ALLEY",
-          "abbrs": ["ALLEE", "ALLEY", "ALLY", "ALY"],
-          "standardAbbr": "ALY"
+          'suffix': 'ALLEY',
+          'abbrs': [ 'ALLEE', 'ALLEY', 'ALLY', 'ALY' ],
+          'standardAbbr': 'ALY'
         },
         {
-          "suffix": "ANEX",
-          "abbrs": ["ANEX", "ANNEX", "ANNX", "ANX"],
-          "standardAbbr": "ANX"
+          'suffix': 'ANEX',
+          'abbrs': [ 'ANEX', 'ANNEX', 'ANNX', 'ANX' ],
+          'standardAbbr': 'ANX'
         },
         {
-          "suffix": "ARCADE",
-          "abbrs": ["ARC", "ARCADE "],
-          "standardAbbr": "ARC"
+          'suffix': 'ARCADE',
+          'abbrs': [ 'ARC', 'ARCADE ' ],
+          'standardAbbr': 'ARC'
+        },
+        {
+          'suffix': 'PLACE',
+          'abbrs': ['PL'],
+          'standardAbbr': 'PL'
         }
       ];
 
@@ -40,7 +45,9 @@ describe( 'index', () => {
         ANNX: 'ANEX',
         ANX: 'ANEX',
         ARC: 'ARCADE',
-        ARCADE: 'ARCADE'
+        ARCADE: 'ARCADE',
+        PLACE: 'PLACE',
+        PL: 'PLACE',
       };
 
       assert.deepEqual( actual, expected );
