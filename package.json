@@ -1,6 +1,6 @@
 {
   "name": "street-suffix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Expands and Abbreviates USPS Street Suffixes",
   "main": "index.js",
   "scripts": {
